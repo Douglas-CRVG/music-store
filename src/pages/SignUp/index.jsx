@@ -15,7 +15,7 @@ import {
   minLength,
   pattern,
 } from '../../utils/reactHookFormConfig';
-import { toastError, toastSuccess } from '../../components/toasts.js';
+import { toastError, toastSuccess } from '../../components/toasts.jsx';
 
 export default function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
