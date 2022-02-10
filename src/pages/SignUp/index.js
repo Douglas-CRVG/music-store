@@ -8,7 +8,7 @@ import AuthContext from '../../contexts/AuthContext.js';
 import { services } from '../../services/services';
 import logo from '../../assets/vinyl-record.png';
 import { Container } from './style.js';
-import { Form, Input, Button } from '../../components';
+import { Form, Input, Button, StyledLink } from '../../components';
 import {
   required,
   maxLength,
@@ -116,6 +116,7 @@ export default function SignUp() {
           )}
         </Button>
       </Form>
+      <StyledLink to='/signIn'>Já tem uma conta? Entre agora!</StyledLink>
     </Container>
   );
 }

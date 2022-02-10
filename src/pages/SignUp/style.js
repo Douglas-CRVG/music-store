@@ -12,6 +12,11 @@ const Container = styled.div`
   form {
     margin-top: 30px;
   }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 export { Container };
