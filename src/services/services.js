@@ -10,8 +10,8 @@ function signUp(body) {
   return axios.post(`${BASE_URL}/signup`, body);
 }
 
-function login(body) {
-  return axios.post(`${BASE_URL}/login`, body);
+function signIn(body) {
+  return axios.post(`${BASE_URL}/signIn`, body);
 }
 
 function getUser(token) {
@@ -41,7 +41,7 @@ function editTransaction(token, id, body) {
 
 export const services = {
   signUp,
-  login,
+  signIn,
   getUser,
   addIncome,
   addExpense,

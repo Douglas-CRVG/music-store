@@ -1,6 +1,7 @@
 import { Form, Input } from './FormComponents/';
-import Button from './Button.js';
+import Button from './Button.jsx';
 import { SiteLogo } from './SiteLogo.js';
 import { StyledLink } from './StyledLink.js';
+import { toastError, toastSuccess } from './toasts.jsx';
 
-export { Form, Input, Button, SiteLogo, StyledLink };
+export { Form, Input, Button, SiteLogo, StyledLink, toastError, toastSuccess };
