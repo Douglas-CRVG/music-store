@@ -1,14 +1,10 @@
-import { StyledContainer } from "../../../styles/containerProducts";
-import Product from "../../Recommended/ContainerRecommended/Product/Product";
+import { ContainerCategories } from "../../../styles/container";
+import Product from "./Product";
 
-export default function Container(){
+export default function Container({ products}){
     return(
-        <StyledContainer>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-        </StyledContainer>
+        <ContainerCategories>
+            {products.map((product, index) => <Product key={index} {...product} />)}
+        </ContainerCategories>
     )
 }

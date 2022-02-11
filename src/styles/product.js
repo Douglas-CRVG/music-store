@@ -4,9 +4,10 @@ const StyledProduct = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 25px;
-    gap: 13px;
+    justify-content: space-between;
     min-width: 152px;
+    width: 152px;
+    height: 183px;
     padding: 16px;
     border-radius: 15px;
     box-shadow: 0 0 4px rgba(0,0,0,.4);
@@ -14,6 +15,7 @@ const StyledProduct = styled.div`
     img{
         width: 80px;
         height: 80px;
+        border-radius: 50%;
     }
 
     h2{
