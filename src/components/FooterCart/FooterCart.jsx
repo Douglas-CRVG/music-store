@@ -9,16 +9,8 @@ export default function FooterCart({acquired}){
     let total = 0;
 
     function handleCheckout(){
-
-        //se existir token
         body.products = acquired;
         console.log(body)
-        /* postBuy(body).then((response) => {
-            console.log(response.data)
-        }).catch (error => {
-            console.log(error.response)
-        })*/
-
         localStorage.setItem('cart', JSON.stringify([]));
         console.log("LS", JSON.parse(localStorage.getItem('cart')))
         navigate("/success", { replace: true })

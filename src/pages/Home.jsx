@@ -4,13 +4,13 @@ import styled from "styled-components"
 import Recommended from "../components/Recommended/Recommended";
 import Categories from "../components/Categories/Categories";
 import { useEffect, useState } from "react";
-import { getProducts } from "../services/api";
+import {services} from "../services/services.js";
 
 export default function Home() {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        getProducts().then(response => {
+        services.getProducts().then(response => {
             setProducts(response.data)
         }).catch(error => {
             console.error(error.response)

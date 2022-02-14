@@ -18,8 +18,13 @@ function getProduct(productId) {
   return axios.get(`${BASE_URL}/product/${productId}`);
 }
 
+function getProducts() {
+  return axios.get(`${BASE_URL}/products`);
+}
+
 export const services = {
   signUp,
   signIn,
   getProduct,
+  getProducts
 };
