@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import { AuthProvider } from '../contexts/AuthContext.js';
-import { Cart, Home, Product, Success, SignIn, SignUp } from '../pages';
-import '../styles/reset.css';
-import { Background } from './Background.js';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from './contexts/AuthContext.js';
+import { Cart, Home, Product, Success, SignIn, SignUp } from './pages';
+import './styles/reset.css';
+import { Background } from './components/Background.js';
 export default function App() {
   return (
     <AuthProvider>
@@ -11,7 +12,7 @@ export default function App() {
         <Background>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/product' element={<Product />} />
+            <Route path='/product/:id' element={<Product />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/success' element={<Success />} />
             <Route path='/signIn' element={<SignIn />} />
