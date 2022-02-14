@@ -1,16 +1,16 @@
 import { Details, ContainerProductCart, StyledProduct, Img } from "../../../styles/productCart";
 
-export default function ProductCart(){
+export default function ProductCart({name, image, description, price}){
     return(
         <ContainerProductCart>
             <StyledProduct>
                 <Img>
-                    <img src="" alt="" />
+                    <img src={image} alt={description} />
                 </Img>
                 <Details>
-                    <p>Produto</p>
+                    <p>{name}</p>
                     <p>Quantidade</p>
-                    <p>Preço</p>
+                    <p>R$ {Number(price).toFixed(2).replace('.', ',')}</p>
                 </Details>
             </StyledProduct>
             <button>-</button>

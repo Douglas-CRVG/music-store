@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom"
+import ConfirmIcon from "../components/Success/ConfirmIcon/ConfirmIcon";
+import ConfirmText from "../components/Success/ConfirmText/ConfirmText";
+import { MainSuccess } from "../styles/success";
 
 export default function Success() {
     const navigate = useNavigate();
@@ -7,13 +10,10 @@ export default function Success() {
         navigate("/", {replace: true})
     }
     return (
-        <main>
-            <div></div>
-            <div>
-                <h1>Pedido confirmado</h1>
-                <p>Seu pedido foi recebido e está sendo atendido</p>
-            </div>
-            <button onClick={forHome} > Ir para o início</button>
-        </main>
+        <MainSuccess>
+            <ConfirmIcon />
+            <ConfirmText />
+            <button onClick={forHome} > Continuar comprando</button>
+        </MainSuccess>
     )
 }
