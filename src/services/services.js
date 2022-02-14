@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = 'http://fesak-music-store-backend.herokuapp.com';
 
 function createConfig(token) {
   return { headers: { Authorization: `JWT ${token}` } };
@@ -22,7 +22,7 @@ function getProducts() {
   return axios.get(`${BASE_URL}/products`);
 }
 
-function postCart(body, token){
+function postCart(body, token) {
   return axios.post(`${BASE_URL}/cart`, body, createConfig(token));
 }
 
@@ -31,5 +31,5 @@ export const services = {
   signIn,
   getProduct,
   getProducts,
-  postCart
+  postCart,
 };
