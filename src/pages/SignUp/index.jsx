@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { SiteLogo } from '../../components/SiteLogo.js';
 import { ThreeDots } from 'react-loader-spinner';
-import 'react-toastify/dist/ReactToastify.css';
 import AuthContext from '../../contexts/AuthContext.js';
 import { services } from '../../services/services';
 import logo from '../../assets/vinyl-record.png';
