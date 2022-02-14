@@ -13,7 +13,6 @@ export default function Home() {
         getProducts().then(response => {
             setProducts(response.data)
         }).catch(error => {
-            console.log("tchau")
             console.error(error.response)
         })
     }, [])
