@@ -18,6 +18,9 @@ export default function FooterCart({acquired}){
         }).catch (error => {
             console.log(error.response)
         })*/
+
+        localStorage.setItem('cart', JSON.stringify([]));
+        console.log("LS", JSON.parse(localStorage.getItem('cart')))
         navigate("/success", { replace: true })
     }
 
