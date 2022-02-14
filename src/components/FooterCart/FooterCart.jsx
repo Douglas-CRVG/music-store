@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import { toastError } from "../../components/toasts.jsx";
 import { StyledFooter } from "../../styles/footerCart";
+import { services } from "../../services/services.js"
 
 export default function FooterCart({acquired}){
     const navigate = useNavigate();
@@ -9,11 +11,26 @@ export default function FooterCart({acquired}){
     let total = 0;
 
     function handleCheckout(){
+        const token = JSON.parse(localStorage.getItem('auth'));
+
+        if (!token){
+            return navigate("/signin", { replace: true })
+        }
+
+        if(acquired.length === 0){
+            toastError('Carrinho vazio! Adicione ao menos 1 produto.')
+            return navigate('/', {replace: true})
+        }
+
         body.products = acquired;
-        console.log(body)
-        localStorage.setItem('cart', JSON.stringify([]));
-        console.log("LS", JSON.parse(localStorage.getItem('cart')))
-        navigate("/success", { replace: true })
+        services.postCart(body, token).then((response)=>{
+            console.log(response)
+            localStorage.setItem('cart', JSON.stringify([]));
+            navigate("/success", { replace: true })
+        }).catch((error)=>{
+            console.log(error.response)
+        })
+        
     }
 
     if(acquired.length > 0){

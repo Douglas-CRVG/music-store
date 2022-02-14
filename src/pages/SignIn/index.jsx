@@ -33,7 +33,7 @@ export default function SignIn() {
   });
 
   useEffect(() => {
-    if (auth) navigate('/');
+    if (auth) navigate(-1);
   }, [auth, navigate]);
 
   async function submitForm(formData) {

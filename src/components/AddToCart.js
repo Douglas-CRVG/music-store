@@ -9,7 +9,6 @@ export default function AddToCart({ children, product }) {
           cart.push(product);
           localStorage.setItem('cart', JSON.stringify(cart));
         } else localStorage.setItem('cart', JSON.stringify([product]));
-        console.log(JSON.parse(localStorage.getItem('cart')));
         toastSuccess('Adicionado com sucesso');
       }}
     >

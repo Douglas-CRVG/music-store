@@ -12,7 +12,6 @@ export default function Product({_id, image, price, name}){
                 <h2>{name}</h2>
                 <Price>
                     <p>R$ {Number(price).toFixed(2).replace(".", ",")}</p>
-                    <p>button</p>
                 </Price>
             </ProductCategories>
         </StyledLink>

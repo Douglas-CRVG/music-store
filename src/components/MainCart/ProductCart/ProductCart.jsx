@@ -1,6 +1,7 @@
 import { Details, ContainerProductCart, StyledProduct, Img } from "../../../styles/productCart";
 
-export default function ProductCart({name, image, description, price}){
+export default function ProductCart({product, deleteProductCart}){
+    const {name, image, description, price} = product
     return(
         <ContainerProductCart>
             <StyledProduct>
@@ -9,11 +10,10 @@ export default function ProductCart({name, image, description, price}){
                 </Img>
                 <Details>
                     <p>{name}</p>
-                    <p>Quantidade</p>
                     <p>R$ {Number(price).toFixed(2).replace('.', ',')}</p>
                 </Details>
             </StyledProduct>
-            <button>-</button>
+            <button onClick={() => deleteProductCart(name)}>-</button>
         </ContainerProductCart>
     )
 }

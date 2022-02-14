@@ -22,9 +22,14 @@ function getProducts() {
   return axios.get(`${BASE_URL}/products`);
 }
 
+function postCart(body, token){
+  return axios.post(`${BASE_URL}/cart`, body, createConfig(token));
+}
+
 export const services = {
   signUp,
   signIn,
   getProduct,
-  getProducts
+  getProducts,
+  postCart
 };
