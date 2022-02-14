@@ -1,4 +1,4 @@
-import App from './components/App';
+import App from './App';
 import ReactDOM from 'react-dom';
 import './styles/reset.css';
 import './styles/global.css';
