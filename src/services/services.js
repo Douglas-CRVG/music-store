@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://fesak-music-store-backend.herokuapp.com';
+const BASE_URL = 'https://fesak-music-store-backend.herokuapp.com';
 
 function createConfig(token) {
   return { headers: { Authorization: `JWT ${token}` } };
